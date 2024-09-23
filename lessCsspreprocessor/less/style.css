@@ -1,0 +1,18 @@
+main {
+  background-color: yellow;
+}
+main p {
+  color: red;
+  font-size: 20px;
+  background-color: #643636;
+}
+main article {
+  background-color: blue;
+}
+main article p {
+  color: yellow;
+  background-color: #bf4040;
+}
+main button {
+  font-size: 40px;
+}

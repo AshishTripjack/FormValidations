@@ -1,0 +1,63 @@
+// to compile .less file to .css we have to run command lessc less/style.less less/style.css
+
+// @bcg:red; //variable
+
+// header{
+//     color: @bcg;
+// }
+
+// .fancy-border(@size:1px, @color:black){
+//     border: @size dashed @color;
+//     padding: 10px;
+// }
+
+// .fancier-border{
+//     .fancy-border(5px, green);   //mixins
+//     background-color: yellow;
+//     border-radius: 10px;
+
+// }
+
+//conditional mixin guards
+
+// .p-style(@size) when(@size <=20){
+//     font-size: @size;
+//     color: orange;
+// }
+// .p-style(@size) when(@size >20){
+//     font-size: @size;
+//     color: brown;
+// }
+
+// p{
+//     .p-style(32px)
+// }
+
+
+// nesting and scope
+
+@base-size: 20px;
+@base-color:rgb(100, 54, 54);
+
+main{
+    background-color: yellow;
+
+    p{
+        color: red;
+        font-size: @base-size;
+        background-color: @base-color;
+    }
+
+    article{
+        background-color: blue;
+        p{
+            color: yellow;
+            // background-color: @base-color+ 60;
+            background-color: desaturate(red,50%);
+        }
+    }
+
+    button{
+        font-size: @base-size*2; //operators
+    }
+}

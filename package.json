@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "less": "^4.2.0",
+    "less-watcher": "^1.2.0"
+  }
+}
