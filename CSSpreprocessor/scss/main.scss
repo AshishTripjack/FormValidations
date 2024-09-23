@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bg-color:#10ac84;  //sass varibales
+
+html{
+    font-size: 10px;
+}
+.main_header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // place-items: center;
+    background-color:$bg-color ;
+
+    h1{                             //nesting /inheritance
+        color:white;
+         font-size: 5rem + 5rem;  //sass operators
+
+         &:hover{
+            color: orange;
+         }
+    }
+    p{
+        color:white;
+        font-size: 5rem + 5rem;
+
+        &:hover{
+            color: orange;
+        }
+    }
+}
+

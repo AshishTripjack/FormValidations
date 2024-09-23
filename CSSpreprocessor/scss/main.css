@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.main_header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #10ac84;
+}
+.main_header h1 {
+  color: white;
+  font-size: 10rem;
+}
+.main_header h1:hover {
+  color: orange;
+}
+.main_header p {
+  color: white;
+  font-size: 10rem;
+}
+.main_header p:hover {
+  color: orange;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validateForm()">
+        <!-- <label for="js">JavaScript</label>
+        <input type="radio" id="js" value="javascript" name="a">
+
+        <label for="py">Python</label>
+        <input type="radio" id="py" value="python" name="a">
+
+        <label for="java">Java</label>
+        <input type="radio" id="java" value="java" name="a">
+
+        <label for="cpp">C++</label>
+        <input type="radio" id="cpp" value="cpp" name="a">
+
+        <input type="submit" value="submit"> -->
+
+        <label for="js">JavaScript</label>
+        <input type="checkbox" id="js" value="javascript" name="a">
+
+        <label for="py">Python</label>
+        <input type="checkbox" id="py" value="python" name="a">
+
+        <label for="java">Java</label>
+        <input type="checkbox" id="java" value="java" name="a">
+
+        <label for="cpp">C++</label>
+        <input type="checkbox" id="cpp" value="cpp" name="a">
+
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+<script>
+    function validateForm(){
+        var valid=false;
+        
+        if(document.getElementById("js").checked){
+            valid=true;
+        }else if(document.getElementById("py").checked){
+            valid=true;
+        }else if(document.getElementById("java").checked){
+            valid=true;
+        }else if(document.getElementById("cpp").checked){
+            valid=true;
+        }
+
+        if(valid){
+            alert("Vaslidation successful")
+        }else{
+            alert("Please select at lest one technology")
+        }
+    }
+</script>
+</html>

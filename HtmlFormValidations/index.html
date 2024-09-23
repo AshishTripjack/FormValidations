@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        form input:invalid {
+            border-color: red;
+        }
+        form input:valid {
+            border-color: green;
+        }
+        form input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="POST" novalidate>
+    <!-- Name -->
+    <input type="text" name="name" id="name" placeholder="Enter your name" required minlength="3">
+    <!-- Contact -->
+    <input type="text" name="contact" id="contact" placeholder="Enter your contact number" required pattern="\d{10}" title="Must be a 10-digit number">
+    <!-- Email -->
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    <!-- Password -->
+    <input type="password" name="password" id="password" placeholder="Enter your password" required minlength="8">
+    <!-- Confirm Password -->
+    <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password" required minlength="8">
+    <!-- Submit -->
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form with Suggestions</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.suggestion {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+    height: 0; /* Hide suggestions initially */
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.suggestion.visible {
+    height: auto; /* Show suggestions */
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <div class="suggestion" id="name-suggestion"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div class="suggestion" id="email-suggestion"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <div class="suggestion" id="password-suggestion"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    const nameSuggestion = document.getElementById('name-suggestion');
+    const emailSuggestion = document.getElementById('email-suggestion');
+    const passwordSuggestion = document.getElementById('password-suggestion');
+
+    nameInput.addEventListener('input', () => {
+        const value = nameInput.value;
+        if (value.length < 3) {
+            nameSuggestion.textContent = "Name should be at least 3 characters.";
+            nameSuggestion.classList.add('visible');
+        } else {
+            nameSuggestion.textContent = "";
+            nameSuggestion.classList.remove('visible');
+        }
+    });
+
+    emailInput.addEventListener('input', () => {
+        const value = emailInput.value;
+        if (!/\S+@\S+\.\S+/.test(value)) {
+            emailSuggestion.textContent = "Please enter a valid email address.";
+            emailSuggestion.classList.add('visible');
+        } else {
+            emailSuggestion.textContent = "";
+            emailSuggestion.classList.remove('visible');
+        }
+    });
+
+    passwordInput.addEventListener('input', () => {
+        const value = passwordInput.value;
+        if (value.length < 6) {
+            passwordSuggestion.textContent = "Password should be at least 6 characters.";
+            passwordSuggestion.classList.add('visible');
+        } else {
+            passwordSuggestion.textContent = "";
+            passwordSuggestion.classList.remove('visible');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
