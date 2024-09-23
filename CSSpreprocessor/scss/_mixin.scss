@@ -1,0 +1,14 @@
+
+@mixin flexProp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin commonProp($spacing, $transform) {  //sass parameters
+    color: white;
+    font-size: 5rem + 5rem;
+    letter-spacing: $spacing;
+    text-transform:$transform ;
+}

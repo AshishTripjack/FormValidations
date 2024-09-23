@@ -5,21 +5,23 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 5px;
 }
 
 .main_header {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: #10ac84;
 }
 .main_header h1 {
   color: white;
   font-size: 10rem;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
 }
 .main_header h1:hover {
   color: orange;
@@ -27,7 +29,12 @@ html {
 .main_header p {
   color: white;
   font-size: 10rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
 }
 .main_header p:hover {
   color: orange;
+}
+.main_header p::after {
+  content: " /SCSS";
 }/*# sourceMappingURL=main.css.map */

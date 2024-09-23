@@ -1,39 +1,52 @@
-*{
+@import "mixin";
+@import "var";
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$bg-color:#10ac84;  //sass varibales
+//1 . operators
+// 2. variables
+// 3. nesting
+// 4. mixin
+// 5. parameter
+// 6. partials
 
-html{
-    font-size: 10px;
+html {
+    font-size: 5px;  //now 1rem= 5px
 }
-.main_header{
+
+.main_header {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include flexProp;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
     // place-items: center;
-    background-color:$bg-color ;
+    background-color: $bg-color ;
 
-    h1{                             //nesting /inheritance
-        color:white;
-         font-size: 5rem + 5rem;  //sass operators
+    h1 {
+        //nesting /inheritance
+        @include commonProp(0.5rem, capitalize);
 
-         &:hover{
-            color: orange;
-         }
-    }
-    p{
-        color:white;
-        font-size: 5rem + 5rem;
-
-        &:hover{
+        &:hover {
             color: orange;
         }
     }
-}
 
+    p {
+        @include commonProp(0.8rem,uppercase);
+
+        &:hover {
+            color: orange;
+        }
+
+        &::after {
+            content: " /SCSS";
+        }
+    }
+}
