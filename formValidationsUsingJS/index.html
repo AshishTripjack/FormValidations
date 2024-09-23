@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,25 +29,22 @@
     </style>
 </head>
 
-<body> -->
+<body>
 
-    <!-- <form id="myForm" onsubmit="return data(event)">
-        <input type="text" id="name" name="username" placeholder="Enter your name"> -->
+    <form id="myForm" onsubmit="return data(event)">
+        <input type="text" id="name" name="username" placeholder="Enter your name">
         <!-- <span id="rName"  class="require"></span> -->
-        <!-- <input type="tel" id="contact" name="contactNumber" placeholder="Enter your contact number">
-        <span id="rContact" class="require"></span>
-        <input type="email" id="email" name="emailAddress" placeholder="Enter your email"> -->
+        <input type="tel" id="contact" name="contactNumber" placeholder="Enter your contact number">
+        <!-- <span id="rContact" class="require"></span> -->
+        <input type="email" id="email" name="emailAddress" placeholder="Enter your email"> 
         <!-- <span id="rEmail" class="require"></span> -->
-        <!-- <input type="password" id="password" name="Password" placeholder="Enter your password"> -->
+        <input type="password" id="password" name="Password" placeholder="Enter your password"> 
         <!-- <span id="rPassword" class="require"></span> -->
-        <!-- <input type="password" id="confirm" name="confirmPassword" placeholder="Confirm your password">
-        <span id="rConfirm" class="require"></span> -->
-        <!-- <input type="submit" value="Submit form">
-    </form> -->
+        <input type="password" id="confirm" name="confirmPassword" placeholder="Confirm your password">
+        <!-- <span id="rConfirm" class="require"></span> -->
+        <input type="submit" value="Submit form">
+    </form>
 
-
-
-<!-- 
 </body>
 <script>
 
@@ -72,19 +69,19 @@
         } else if (confirm != password) {
             alert("Please confirm your password");
             return false;
-        } 
+        }
 
         const form = document.getElementById("myForm");
         const formData = new FormData(form);
 
         console.log(formData);
-        
+
         // console.log(name);
         // console.log(contact);
         // console.log(email);
         // console.log(password);
         // console.log(confirm);
-        
+
         const values = [];
 
         formData.forEach((value) => {
@@ -92,7 +89,7 @@
         });
         console.log("Form values:", values);
 
-        
+
         formData.forEach((value, key) => {
             console.log(key + ": " + value);
         });
@@ -103,4 +100,4 @@
 
 
 
-</html> -->
+</html>
