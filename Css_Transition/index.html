@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+
+    <style>
+        .conatiner{
+            background-color: blanchedalmond;
+            height: 40vh;
+            width: 50vw;
+        }
+
+        .box{
+            background-color: aqua;
+            height: 4vh;
+            width: 5vw;
+            /* transition-property: transform,color; 
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;  */
+
+            /* shorthand of transition  */
+
+            transition: transform 3s ease-in-out 1s;
+
+            
+
+        }
+
+        .translate{
+            transform: translateX(10vw) translateY(10vh);
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Use of css transition is to going from one state to another "smoothly" i.e the transition looks appealing  -->
+    
+    <div class="conatiner">
+        <div class="box translate">
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

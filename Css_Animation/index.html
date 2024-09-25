@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+
+    <style>
+        .conatiner{
+            background-color: rgb(9, 106, 106);
+            width: 30vw;
+            height: 80vh;
+        }
+
+        .box{
+            width: 34px;
+            height: 45px;
+            color: white;
+            /* background-color: aqua; */
+            /* animation-name: myAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            animation-direction: alternate-reverse; */
+
+            /* animation short hand  */
+
+            animation: myAnimation 3s ease-in-out 1 forwards;
+        }
+
+        @keyframes myAnimation {
+            from{
+                background-color: red;
+
+            }
+            to{
+                background-color: yellow;
+                transform: translateX(400px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="conatiner">
+        <div class="box">
+            BOX
+        </div>
+    </div>
+    
+</body>
+</html>
