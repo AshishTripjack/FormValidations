@@ -23,40 +23,54 @@
     // addLanguage("python");
     // addLanguage("Typescript");
 
-   //Optimize way
+    //Optimize way
 
-   function addOptiLanguage(langName){
-    const li=document.createElement('li');
-    li.appendChild(document.createTextNode(langName));
-    document.querySelector('.language').appendChild(li);
-   }
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
 
-   addOptiLanguage('Java');
-   addOptiLanguage('Golang');
-
-
-   //Edit an Element
-
-   const second=document.querySelector('li:nth-child(2)');
-//    second.innerHTML="Mojo";
-
-   //optimize way
-
-   const newLi=document.createElement('li');
-   newLi.textContent="Mojo";
-   second.replaceWith(newLi);
+    addOptiLanguage('Java');
+    addOptiLanguage('Golang');
 
 
+    //Edit an Element
 
-   //Delete/Remove
+    const second = document.querySelector('li:nth-child(2)');
+    //    second.innerHTML="Mojo";
 
-   const langLang=document.querySelector('li:last-child');
-   langLang.remove();
+    //optimize way
+
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+    second.replaceWith(newLi);
 
 
-   
 
-   
+    //Delete/Remove
+
+    const langLang = document.querySelector('li:last-child');
+    langLang.remove();
+
+
+
+    function abc() {
+       
+        console.log(a);
+    }
+    var a=6;
+    abc();
+    
+    
+
+
+
+
+
+
+
+
 </script>
 
 </html>
