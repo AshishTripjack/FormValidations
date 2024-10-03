@@ -43,3 +43,5 @@ searchBtn.addEventListener("click",()=>{
     console.log(checkWeather.response);
     
 })
+
+let a=(a)
