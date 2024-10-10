@@ -13,18 +13,20 @@ class DidUpdate extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        console.log("did updateq", this.state.count);
+        
     //   console.log(prevState.count, this.state.count);
       
-        if((this.state.count, prevState.count)){
-            alert("working");
-            console.log(
-                "ComponentDidUpdate Called",
-                prevState.count,
-                this.state.count,
-                prevProps
-            );
+        // if((this.state.count, prevState.count)){
+        //     alert("working");
+        //     console.log(
+        //         "ComponentDidUpdate Called",
+        //         prevState.count,
+        //         this.state.count,
+        //         prevProps
+        //     );
             
-        }
+        // }
 
         // if(this.state.count){  //this will lead to infinite loop
         //     this.setState({

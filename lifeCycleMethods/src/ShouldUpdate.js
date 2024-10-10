@@ -15,15 +15,20 @@ class ShouldUpdate extends React.Component{
 
          //we can also do conditional rendering i.e when to render or not
 
-         if(nextState.count <5){
+        //  if(nextState.count <5){
             
-            return true;
-            //here the state updates till 4 and re-renders and after then the update will happen but no re-rendering
-         }
+        //     return true;
+        //     //here the state updates till 4 and re-renders and after then the update will happen but no re-rendering
+        //  }
 
 
 
-         return false;
+         return true;
+        
+    }
+
+    componentDidUpdate(){
+        console.log("update");
         
     }
 

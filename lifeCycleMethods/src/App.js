@@ -12,7 +12,7 @@ class App extends React.Component{
         console.log("Constructor Called");  
     }
 
-  updateRender=()=>{
+  updateRender=()=>{ //it is arrow function instead of bind
     this.setState({
         name:"Ashish"
     });
