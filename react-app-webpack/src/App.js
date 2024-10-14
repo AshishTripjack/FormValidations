@@ -4,32 +4,32 @@ import Cloud from './clouds.png';
 
 class App extends React.Component {
 
-    formatName=(user)=>{
+    formatName = (user) => {
         return `Super human ${user}`;
 
     }
 
-constructor(props){
+    constructor(props) {
         super(props);
 
-        this.state={
-            name:''
+        this.state = {
+            name: ''
         }
     }
 
-    handleButtonClickEvent=(event)=>{
-        this.setState({name:'Ashish'})
+    handleButtonClickEvent = (event) => {
+        this.setState({ name: 'Ashish' })
 
     };
 
     render() {
 
-        const element=<h2>Hello World</h2>
+        const element = <h2>Hello World</h2>
 
-        const name="Ashish";
-        const elementTwo=<h2>Hello {name}</h2>
+        const name = "Ashish";
+        const elementTwo = <h2>Hello {name}</h2>
 
-        const elementThree=(
+        const elementThree = (
             <div className="my-class">
                 <h2>This is {this.formatName('SuperMan')}</h2>
 
@@ -51,3 +51,7 @@ constructor(props){
 };
 
 export default App;
+
+
+//use layout effect
+//
